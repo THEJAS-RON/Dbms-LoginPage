@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to discussion forum</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="topSection">
+            <div id="img-logo">
+                <img class = "logo" src="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg"/>
+            </div>
+            <ul class="navbar">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Table Booking</li>
+                <li>Online Services</li>
+            </ul>
+            <div>
+                <button id="loginBtn">Sign In</button>
+            </div>
+        </nav>
+        <div id="signInModel" class="form-box">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p>Forgot Password?<a href="#">Click here</a>></p>
+                </div>
+                <div class="login">
+                    <button class="btn btn-primary"><a href="#">log In</a></button>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign up</button>
+                    <button type="button" id="signinBtn">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login_script.js">
+
+    </script>
+</body>
+
+</html>

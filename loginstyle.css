@@ -1,0 +1,272 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* top Section */
+.topSection::before{
+    content: "";
+    background-color: #000000;
+    opacity: 0.4;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.topSection {
+    /* position: relative; */
+    position: sticky;
+    /* top: 10px; */
+    /* right: 10px; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px 10px; */
+    height: 9vh;
+    align-items: center;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 2px;
+    margin: 0px 10px;
+    /* left: 10px; */
+}
+.topSection ul{
+    display: flex;
+    width: 50%;
+    position: relative;
+    /* left: -150px; */
+    /* justify-content: space-between; */
+    left: -275px;
+}
+.topSection li{
+    /* position: relative; */
+    list-style: none;
+    padding: 5px 10px;
+    margin: 10px 10px;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out 0s;
+    /* transition: border-radius 1s ease-in-out 0s; */
+}
+.topSection li:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+}
+#loginBtn{
+    /* color: #000000; */
+    /* position: relative;
+    top: 10px;
+    right: 10px; */
+    font-size: 14px;
+    padding: 4px 24px;
+    margin: 2px 10px;
+    /* border: 1px solid black; */
+    /* background-color: transparent; */
+    border-radius: 20px;
+    /* text-decoration: underline; */
+    cursor: pointer;
+
+    background-color: rgb(11, 158, 243);
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    border: none;
+    
+}
+#loginBtn:hover{
+    background-color: rgb(132, 189, 224);
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    border: none;
+}
+#loginBtn.active{
+    background-color: rgb(222, 224, 225);
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    border: none;
+}
+/* Body */
+body::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/1428412216/photo/a-male-chef-pouring-sauce-on-meal.webp?b=1&s=170667a&w=0&k=20&c=mMfLAC5goaTvBlr5_2w3e87pi91EqXDtEFh5e4pQUTM=');
+    /* background-position: center; */
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.95;
+}
+/* pop up login form */
+.form-box {
+    display: none;
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: #fff; */
+    padding: 50px 60px 70px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    opacity: 0;
+    /* transition: border-radius 1s ease 10s; */
+}
+.form-box.pop-up{
+    display: block;
+    opacity: 1;
+    animation-name: poping;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes poping {
+    0%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.form-box h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: black;
+    position: relative;
+}
+
+.form-box h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: black;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field {
+    background: #ffffff;
+    /* border: 2px solid black; */
+    margin: 15px 0;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    color: black;
+}
+.input-field ::placeholder{
+    color: #979494;
+    font-size: 17px;
+}
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+    color: black;
+    font-size: 18px;
+}
+
+.input-field i {
+    margin-left: 15px;
+    color: #999;
+}
+
+form p {
+    text-align: left;
+    font-size: 13px;
+    color: black;
+}
+
+form p a {
+    text-decoration: none;
+    /* color: #3c00a0; */
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button {
+    flex-basis: 48%;
+    background-color: #ffffff;
+    color: #000;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.input-group {
+    height: 280px;
+}
+
+.btn-field button.active {
+    background-color: rgb(21, 157, 235);
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+}
+.btn-field button:hover{
+    background-color: rgb(21, 157, 235);
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+}
+/* .btn-field button.disable{
+    background: #eaeaea;
+    color: #555;
+} */
+
+/* utility classes */
+.btn {
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    /* background-color: black; */
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: black;
+    padding: 8px 138px;
+    position: relative;
+    top: -18px;
+}
+.close {
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    font-size: 49px;
+    cursor: pointer;
+    color: black;
+}
